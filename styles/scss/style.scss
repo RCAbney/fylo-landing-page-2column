@@ -1,0 +1,397 @@
+@import "_reset";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  text-align: center;
+  color: $brand-primary;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headings;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.primary-navigation {
+  li {
+    display: inline-block;
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+    a {
+      color: $brand-primary;
+      font-size: 0.8rem;
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 1px solid $brand-primary;
+      }
+    }
+  }
+}
+
+.brand-logo {
+  max-width: 70px;
+  margin: 0;
+}
+
+.footer-logo {
+  max-width: 170px;
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  &:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+  }
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.testimonial-section {
+  background-color: $brand-neutral-primary;
+}
+
+.testimonial-link {
+  display: inline-block;
+  color: $brand-secondary-accent;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid $brand-secondary-accent;
+  &:after {
+    content: "";
+    display: inline-block;
+    background: url("../../images/icon-arrow.svg") 0 0 no-repeat;
+    background-size: 1.5rem 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    vertical-align: -25%;
+  }
+}
+
+.call-to-action-section {
+  color: red;
+  background-color: $brand-primary-desat;
+  color: $brand-neutral-primary;
+}
+
+footer {
+  background-color: $brand-primary;
+  text-align: left;
+  p,
+  a {
+    color: $brand-neutral-primary;
+  }
+}
+
+input,
+button {
+  font-family: $font-headings;
+  display: block;
+  padding: 1rem;
+  margin: 0 auto 1rem auto;
+  border-radius: 3px;
+  border: 0;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid $brand-primary;
+}
+button {
+  font-weight: 700;
+  color: $brand-neutral-primary;
+  background-color: $brand-primary-accent;
+}
+.email-signup,
+.call-to-action {
+  input,
+  button {
+    width: 100%;
+  }
+}
+
+.call-to-action {
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+  }
+  button,
+  input {
+    border: 0;
+    box-shadow: 4px 4px 4px #555;
+  }
+}
+
+.email-signup {
+  button {
+    box-shadow: 4px 4px 4px #ddd;
+  }
+}
+
+.contact-email:before,
+.contact-phone:before {
+  margin-right: 1rem;
+  vertical-align: -15%;
+}
+
+.contact-phone:before {
+  content: url("../../images/icon-phone.svg");
+}
+
+.contact-email:before {
+  content: url("../../images/icon-email.svg");
+}
+
+.footer-links {
+  margin-bottom: 2.5rem;
+  li {
+    margin-bottom: 0.5rem;
+  }
+  a {
+    color: $brand-neutral-primary;
+  }
+}
+
+.blockquote {
+  text-align: left;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 0 auto 2rem auto;
+  box-shadow: 0 0 12px #eee;
+  font-size: 0.7rem;
+  blockquote {
+    margin-bottom: 1rem;
+    &:before {
+      content: url("../../images/icon-quotes.svg");
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+  }
+  .author {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    img {
+      border-radius: 50%;
+      max-width: 2.5rem;
+      align-self: flex-start;
+      margin-right: 1rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    span {
+      color: $brand-secondary-accent;
+    }
+  }
+}
+
+.social-icons {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  li {
+    padding: 0;
+    &:last-child {
+      a {
+        margin: 0;
+      }
+    }
+    a {
+      text-align: center;
+      display: inline-flex;
+      color: $brand-neutral-primary;
+      font-size: 1rem;
+      border: 1px solid $brand-neutral-primary;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.product-image {
+  margin-bottom: 1.5rem;
+}
+
+.desktop-curve {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    align-items: flex-start;
+  }
+  .wrapper {
+    padding: 5.125rem;
+    padding-bottom: 0;
+  }
+
+  .primary-navigation {
+    li {
+      &:not(:last-of-type) {
+        margin-right: 3.75rem;
+      }
+      a {
+        color: $brand-primary;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .brand-logo {
+    max-width: 170px;
+  }
+
+  h2,
+  h3 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .introduction,
+  .testimonial,
+  .call-to-action {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .product-copy {
+      margin-right: 2rem;
+      min-width: 50%;
+    }
+    .product-image {
+      order: 2;
+    }
+  }
+
+  .footer-logo {
+    max-width: 170px;
+  }
+
+  .mobile-curve {
+    display: none;
+  }
+
+  .desktop-curve {
+    display: block;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .social-icons {
+    margin-top: 0;
+  }
+
+  .email-signup {
+    display: flex;
+    justify-content: space-between;
+    input {
+      margin-right: 1rem;
+      flex: 2;
+      font-size: 0.8rem;
+    }
+    button {
+      flex: 1;
+      font-size: 0.8rem;
+    }
+  }
+
+  .call-to-action {
+    padding-bottom: 4rem;
+    align-items: baseline;
+    justify-content: space-between;
+    .product-copy {
+      min-width: 0;
+      width: 45%;
+    }
+    form {
+      width: 40%;
+      margin: 0;
+    }
+    button {
+      width: auto;
+      margin: 0 auto 0 0;
+    }
+  }
+  .blockquote {
+    max-width: 60%;
+    margin: 0;
+    margin-bottom: 6rem;
+  }
+}
