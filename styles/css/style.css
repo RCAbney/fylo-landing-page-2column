@@ -450,6 +450,7 @@ h3 {
 .testimonial .product-image,
 .call-to-action .product-image {
     order: 2;
+    max-width: 50%;
   }
 
   .footer-logo {
